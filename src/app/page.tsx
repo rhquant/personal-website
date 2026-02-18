@@ -2,10 +2,8 @@ export default function Home() {
   const interests = [
     { label: "Texas Longhorns Football", bg: "bg-orange-50", border: "border-orange-200", text: "text-orange-700", hover: "hover:bg-orange-600" },
     { label: "Big Green Egg", bg: "bg-green-50", border: "border-green-200", text: "text-green-700", hover: "hover:bg-green-600" },
-    { label: "SaaS", bg: "bg-blue-50", border: "border-blue-200", text: "text-blue-700", hover: "hover:bg-blue-600" },
     { label: "Statistics", bg: "bg-purple-50", border: "border-purple-200", text: "text-purple-700", hover: "hover:bg-purple-600" },
     { label: "Indie Rock", bg: "bg-rose-50", border: "border-rose-200", text: "text-rose-700", hover: "hover:bg-rose-600" },
-    { label: "Personal Finance", bg: "bg-emerald-50", border: "border-emerald-200", text: "text-emerald-700", hover: "hover:bg-emerald-600" },
     { label: "Cycling", bg: "bg-sky-50", border: "border-sky-200", text: "text-sky-700", hover: "hover:bg-sky-600" },
     { label: "Coffee", bg: "bg-amber-50", border: "border-amber-200", text: "text-amber-700", hover: "hover:bg-amber-600" },
     { label: "Golf", bg: "bg-teal-50", border: "border-teal-200", text: "text-teal-700", hover: "hover:bg-teal-600" },
@@ -95,6 +93,35 @@ export default function Home() {
                 {interest.label}
               </span>
             ))}
+          </div>
+        </section>
+
+        {/* Expertise Section */}
+        <section className="mt-20 border-t border-slate-200 pt-12">
+          <h2 className="text-2xl font-bold text-slate-900">Expertise</h2>
+          <div className="mt-6 grid gap-8 sm:grid-cols-2">
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-teal-600">
+                Strategic Domains
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                <li>Revenue Operations &amp; GTM Strategy</li>
+                <li>Sales Performance &amp; Productivity</li>
+                <li>Forecasting &amp; Pipeline Management</li>
+                <li>Territory Design &amp; Capacity Planning</li>
+                <li>Cross-functional Leadership</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-teal-600">
+                Technical Stack
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+                <li><span className="font-medium text-slate-700">CRM &amp; Sales Tech:</span> Salesforce, Outreach, Gong, Clari</li>
+                <li><span className="font-medium text-slate-700">Analytics &amp; BI:</span> SQL, Tableau, Looker, Excel</li>
+                <li><span className="font-medium text-slate-700">AI &amp; Automation</span></li>
+              </ul>
+            </div>
           </div>
         </section>
 
