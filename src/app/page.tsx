@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   const interests = [
     { label: "Texas Longhorns Football", bg: "bg-orange-50", border: "border-orange-200", text: "text-orange-700", hover: "hover:bg-orange-600" },
@@ -65,9 +67,16 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <section className="flex flex-col items-center gap-8 sm:flex-row sm:items-start">
-          <div className="flex h-48 w-48 shrink-0 items-center justify-center rounded-2xl bg-slate-100 text-sm text-slate-400">
-            Your Photo
+        <section className="flex flex-col items-center gap-8 sm:flex-row sm:items-center">
+          <div className="h-48 w-48 shrink-0 overflow-hidden rounded-2xl">
+            <Image
+              src="/headshot.jpg"
+              alt="Travis Kasinger"
+              width={384}
+              height={384}
+              className="h-full w-full scale-[1.4] object-cover object-top"
+              priority
+            />
           </div>
           <div className="text-center sm:text-left">
             <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
@@ -82,7 +91,7 @@ export default function Home() {
         </section>
 
         {/* Interests Section */}
-        <section className="mt-20 border-t border-slate-200 pt-12">
+        <section className="mt-12 border-t border-slate-200 pt-8">
           <h2 className="text-2xl font-bold text-slate-900">Interests</h2>
           <div className="mt-6 flex flex-wrap gap-3">
             {interests.map((interest) => (
@@ -97,7 +106,7 @@ export default function Home() {
         </section>
 
         {/* Expertise Section */}
-        <section className="mt-20 border-t border-slate-200 pt-12">
+        <section className="mt-12 border-t border-slate-200 pt-8">
           <h2 className="text-2xl font-bold text-slate-900">Expertise</h2>
           <div className="mt-6 grid gap-8 sm:grid-cols-2">
             <div>
@@ -126,7 +135,7 @@ export default function Home() {
         </section>
 
         {/* Background Section */}
-        <section className="mt-20 border-t border-slate-200 pt-12">
+        <section className="mt-12 border-t border-slate-200 pt-8">
           <h2 className="text-2xl font-bold text-slate-900">Background</h2>
           <div className="mt-6 space-y-6">
             <div className="border-l-2 border-teal-600 py-2 pl-6">
@@ -185,45 +194,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Projects Section */}
-        <section className="mt-20 border-t border-slate-200 pt-12">
-          <h2 className="text-2xl font-bold text-slate-900">Projects</h2>
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
-            <div className="p-6">
-              <h3 className="font-semibold text-slate-800">Project One</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                A brief description of what this project does and the
-                technologies used to build it.
-              </p>
-              <div className="mt-4 flex gap-2">
-                <span className="rounded bg-slate-100 px-2 py-1 text-xs text-slate-600">
-                  React
-                </span>
-                <span className="rounded bg-slate-100 px-2 py-1 text-xs text-slate-600">
-                  TypeScript
-                </span>
-              </div>
-            </div>
-            <div className="p-6">
-              <h3 className="font-semibold text-slate-800">Project Two</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                A brief description of what this project does and the
-                technologies used to build it.
-              </p>
-              <div className="mt-4 flex gap-2">
-                <span className="rounded bg-slate-100 px-2 py-1 text-xs text-slate-600">
-                  Next.js
-                </span>
-                <span className="rounded bg-slate-100 px-2 py-1 text-xs text-slate-600">
-                  Tailwind
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Education Section */}
-        <section className="mt-20 border-t border-slate-200 pt-12">
+        <section className="mt-12 border-t border-slate-200 pt-8">
           <h2 className="text-2xl font-bold text-slate-900">Education</h2>
           <div className="mt-6">
             <div className="border-l-2 border-teal-600 py-2 pl-6">
